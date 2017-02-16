@@ -4,7 +4,8 @@
 ### 效果图
 ![](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/screenshot/img.gif)  
 ### 演示APK
-![](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/sample_debug.apk)  
+[演示apk下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/sample_debug.apk) 
+
 
 ### 头部底部添加
 // 添加/删除 头部View (支持多个)
