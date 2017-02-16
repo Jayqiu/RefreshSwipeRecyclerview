@@ -98,10 +98,10 @@ rv_emptyView               | reference                      | 无        | empty
 rv_isEmptyViewKeepShowHeadOrFooter | boolean                | false     | 显示EmptyView时，是否保留显示已设置的HeadView和FooterView
 rv_layoutManager           | linear / grid / staggeredGrid  | 无        | 布局类型
 rv_layoutManagerOrientation| horizontal / vertical          | vertical  | 布局方向
-rv_spanCount               | integer                        | 2         | 格子数量，frv_layoutManager=grid / staggeredGrid时有效
+rv_spanCount               | integer                        | 2         | 格子数量，rv_layoutManager=grid / staggeredGrid时有效
 rv_headerDividersEnabled   | boolean                        | false     | 是否启用headView中的分割线
 rv_footerDividersEnabled   | boolean                        | false     | 是否启用footerView中的分割线
 
 # Thanks
-RefreshSwipeRecyclerview 主要的是对 [FamiliarRecyclerView]https://github.com/iwgang/FamiliarRecyclerView) 和[SwipeRecyclerView]https://github.com/yanzhenjie/SwipeRecyclerVie 的一个整合修改
+RefreshSwipeRecyclerview 主要的是对 [FamiliarRecyclerView]（https://github.com/iwgang/FamiliarRecyclerView) 和[SwipeRecyclerView]（https://github.com/yanzhenjie/SwipeRecyclerVie） 的一个整合修改
 代码暂时还没有提交到Jcenter管理、希望需要的小伙伴clone代码直接引用mode
