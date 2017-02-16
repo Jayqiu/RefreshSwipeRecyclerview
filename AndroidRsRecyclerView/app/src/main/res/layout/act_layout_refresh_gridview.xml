@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#EEAADD"
+        android:gravity="center"
+        android:text="no data"
+        android:visibility="gone" />
+
+    <com.threehalf.rsrecyclerview.refresh.RefreshSwipeRecyclerView
+        android:id="@+id/refreshGridRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:rv_divider="#333333"
+        app:rv_dividerHeight="0.5dp"
+        app:rv_emptyView="@id/tv_empty"
+        app:rv_isEmptyViewKeepShowHeadOrFooter="true"
+        app:rv_layoutManager="grid"
+        app:rv_layoutManagerOrientation="vertical"
+        app:rv_spanCount="3" />
+
+</FrameLayout>

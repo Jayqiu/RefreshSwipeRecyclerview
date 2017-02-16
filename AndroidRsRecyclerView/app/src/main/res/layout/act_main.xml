@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="ListView"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_vlv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vertical ListView"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_hlv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Horizontal ListView "
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="GridView"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_vgv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vertical GridView "
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_hgv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Horizontal GridView "
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="StaggeredGridLayout(瀑布流)"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_vsgv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vertical StaggeredGridLayout(瀑布流)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_hsgv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Horizontal StaggeredGridLayout(瀑布流)"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="下拉刷新上拉加载更多"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="刷新 ListView "
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_rgv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="刷新 GridView "
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_rsgv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="刷新 StaggeredGridView "
+        android:textAllCaps="false" />
+
+</LinearLayout>
+
+

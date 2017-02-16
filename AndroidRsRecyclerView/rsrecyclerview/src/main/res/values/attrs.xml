@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RefreshRecyclerView">
+        <attr name="rv_divider" format="reference|color" />
+        <attr name="rv_dividerVertical" format="reference|color" />
+        <attr name="rv_dividerHorizontal" format="reference|color" />
+        <attr name="rv_dividerHeight" format="dimension" />
+        <attr name="rv_dividerVerticalHeight" format="dimension" />
+        <attr name="rv_dividerHorizontalHeight" format="dimension" />
+        <attr name="rv_itemViewBothSidesMargin" format="dimension" />
+        <attr name="rv_emptyView" format="reference" />
+        <attr name="rv_isEmptyViewKeepShowHeadOrFooter" format="boolean" />
+        <attr name="rv_layoutManager" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="grid" value="1" />
+            <enum name="staggeredGrid" value="2" />
+        </attr>
+        <attr name="rv_layoutManagerOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="rv_spanCount" format="integer" />
+        <attr name="rv_isReverseLayout" format="boolean" />
+        <attr name="rv_headerDividersEnabled" format="boolean" />
+        <attr name="rv_footerDividersEnabled" format="boolean" />
+        <attr name="rv_isNotShowGridEndDivider" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="leftViewId" format="reference" />
+        <attr name="rightViewId" format="reference" />
+        <attr name="contentViewId" format="reference" />
+    </declare-styleable>
+
+</resources>
