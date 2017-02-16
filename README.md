@@ -104,4 +104,4 @@ rv_footerDividersEnabled   | boolean                        | false     | 是否
 
 # Thanks
 RefreshSwipeRecyclerview 主要的是对 [FamiliarRecyclerView](https://github.com/iwgang/FamiliarRecyclerView) 和[SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerVie) 的一个整合修改
-代码暂时还没有提交到Jcenter管理、希望需要的小伙伴clone代码直接引用mode
+代码暂时还没有提交到Jcenter管理、希望需要的小伙伴clone代码直接引用 rsrecyclerview Module
