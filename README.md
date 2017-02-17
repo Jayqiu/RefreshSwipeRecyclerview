@@ -9,6 +9,16 @@
 ```
 compile 'com.threehalf:rsrecyclerview:1.0.0'
 ```
+###  Maven
+```
+<dependency>
+  <groupId>com.threehalf</groupId>
+  <artifactId>rsrecyclerview</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
+###
 ### 头部底部添加
 // 添加/删除 头部View (支持多个)
 mRecyclerView.addHeaderView() 和 .removeHeaderView()
