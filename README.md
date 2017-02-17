@@ -2,9 +2,11 @@
 一个Android ListView、GridView、瀑布流的 下拉刷新，上拉加载更多,侧滑显示菜单.
 
 ### 效果图
-![](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/screenshot/img.gif)  
+![]([0])  
 ### 演示APK
 [演示apk下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/sample_debug.apk) 
+### 引用
+[aar下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/aarfile/rsrecyclerview-1.0.0.aar) 
 
 ### 头部底部添加
 // 添加/删除 头部View (支持多个)
@@ -109,3 +111,4 @@ rv_footerDividersEnabled   | boolean                        | false     | 是否
 # Thanks
 RefreshSwipeRecyclerview 主要的是对 [FamiliarRecyclerView](https://github.com/iwgang/FamiliarRecyclerView) 和[SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerVie) 的一个整合修改
 代码暂时还没有提交到Jcenter管理、希望需要的小伙伴clone代码直接引用 rsrecyclerview Module
+[0]:https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/screenshot/img.gif
