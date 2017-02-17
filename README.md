@@ -5,8 +5,10 @@
 ![](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/screenshot/img.gif)  
 ### 演示APK
 [演示apk下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/sample_debug.apk) 
-
-
+### gradle
+```
+compile 'com.threehalf:rsrecyclerview:1.0.0'
+```
 ### 头部底部添加
 // 添加/删除 头部View (支持多个)
 mRecyclerView.addHeaderView() 和 .removeHeaderView()
