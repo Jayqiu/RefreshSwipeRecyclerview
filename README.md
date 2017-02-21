@@ -6,7 +6,9 @@
 ### 演示APK
 [演示apk下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/sample_debug.apk) 
 ### 引用
-[aar下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/aarfile/rsrecyclerview-1.0.0.aar) 
+[aar v1.0.0下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/aarfile/rsrecyclerview-1.0.0.aar) 
+[aar v1.0.1下载](https://github.com/Jayqiu/RefreshSwipeRecyclerview/blob/master/AndroidRsRecyclerView/aarfile/rsrecyclerview-1.0.1.aar) 
+
 将下载的aar文件放在项目的libs中
 你的build.gradle添加
 ```
