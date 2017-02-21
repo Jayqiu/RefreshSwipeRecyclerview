@@ -47,7 +47,7 @@ public class ActRefreshListView extends FragmentActivity {
             setContentView(R.layout.act_layout_refresh_listview);
 
         ButterKnife.bind(this);
-        mRsRecyclerView.setLoadMoreView(new LoadMoreView(this));
+//        mRsRecyclerView.setLoadMoreView(new LoadMoreView(this));
         mRsRecyclerView.setColorSchemeColors( Color.BLUE, Color.YELLOW, Color.GREEN);
         mRecyclerView=mRsRecyclerView.getRefreshRecyclerView();
         //

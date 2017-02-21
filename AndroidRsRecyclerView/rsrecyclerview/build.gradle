@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+version = "1.0.0"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -17,9 +20,95 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:recyclerview-v7:23.0.0'
+}
+
+def siteUrl = 'https://github.com/Jayqiu/RefreshSwipeRecyclerview'                        // #CONFIG# // project homepage
+def gitUrl = 'https://github.com/Jayqiu/RefreshSwipeRecyclerview.git'                     // #CONFIG# // project git
+group = "com.threehalf"                                                          // #CONFIG# // Maven Group ID for the artifact (pageckage name is ok)
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                name 'RefreshSwipeRecyclerview For Android'                                   // #CONFIG# // project title
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'jayqiu'                                           // #CONFIG# // your user id (you can write your nickname)
+                        name 'jayqiu'                                       // #CONFIG# // your user name
+                        email 'jay.qiu087@gmail.com'                               // #CONFIG# // your email
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    options.encoding = "utf-8"
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+//javadoc {
+//    options{
+//        encoding "UTF-8"
+//        charSet 'UTF-8'
+//        author true
+//        version true
+//        links "http://docs.oracle.com/javase/7/docs/api"
+//    }
+//}
+artifacts {
+    // archives javadocJar
+    archives sourcesJar
+}
+Properties properties = new Properties()
+boolean isHasFile = false
+if (project.rootProject.file('local.properties') != null){
+    isHasFile = true
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+}
+bintray {
+    user = isHasFile ? properties.getProperty("bintray.user") : System.getenv("bintray.user")
+    key = isHasFile ? properties.getProperty("bintray.apiKey") : System.getenv("bintray.apiKey")
+    configurations = ['archives']
+    pkg {
+        userOrg = "threehalf"
+        repo = "maven"
+        name = "RefreshSwipeRecyclerview"
+        // #CONFIG# project name in jcenter
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
 }

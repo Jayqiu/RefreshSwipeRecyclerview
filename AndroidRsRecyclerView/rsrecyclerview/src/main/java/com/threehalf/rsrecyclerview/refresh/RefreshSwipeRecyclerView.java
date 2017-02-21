@@ -33,6 +33,8 @@ public class RefreshSwipeRecyclerView  extends SwipeRefreshLayout implements Swi
         mRvList = new RefreshRecyclerView(getContext(), attrs);
         addView(mRvList, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setOnRefreshListener(this);
+        mLoadMoreView=new RLoadMoreView(getContext());
+        setLoadMoreView(mLoadMoreView);
     }
 
     @Override
@@ -63,7 +65,11 @@ public class RefreshSwipeRecyclerView  extends SwipeRefreshLayout implements Swi
             }
             return;
         }
+        if (null != mLoadMoreView) {
+            mRvList.removeFooterView(mLoadMoreView.getView());
+            mRvList.removeOnScrollListener(mRefreshRecyclerViewOnScrollListener);
 
+        }
         mLoadMoreView = loadMoreView;
         mRvList.addFooterView(mLoadMoreView.getView());
         initializeLoadMoreView();
