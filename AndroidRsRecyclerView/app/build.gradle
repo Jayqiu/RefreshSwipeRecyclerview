@@ -25,11 +25,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    repositories {
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.0'
     compile 'com.jakewharton:butterknife:7.0.1'
+//    compile(name:'rsrecyclerview-1.0.0',ext:'aar')
+//    compile 'com.android.support:recyclerview-v7:23.0.0'
     compile project(':rsrecyclerview')
 }
