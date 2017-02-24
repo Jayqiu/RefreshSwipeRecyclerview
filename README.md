@@ -12,7 +12,7 @@
 ```
 repositories {
         flatDir {
-            dirs 'libs'   // aar目录
+            dirs 'libs'   // aar     目录
         }
     }
 compile 'com.android.support:recyclerview-v7:23.0.0'
