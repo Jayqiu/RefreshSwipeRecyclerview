@@ -24,8 +24,8 @@ mRecyclerView.addHeaderView() 和 .removeHeaderView()
 
 // 添加/删除 底部View (支持多个)
 mRecyclerView.addFooterView() 和 .removeFooterView()
-### Adapter（BaseRrAdapter）适配
-继承BaseRrAdapter<T>
+### Adapter（BaseRvAdapter）适配
+继承BaseRvAdapter<T>
 ```
 /**
      * 取得ItemView的布局文件
