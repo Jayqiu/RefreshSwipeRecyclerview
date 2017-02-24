@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.threehalf.rsrecyclerview.refresh.BaseRrAdapter;
+import com.threehalf.rsrecyclerview.refresh.BaseRvAdapter;
 import com.threehalf.rsrecyclerview.refresh.RefreshRecyclerView;
 
 import java.util.ArrayList;
@@ -73,7 +73,7 @@ public class ActStaggeredGridView extends FragmentActivity {
         adapter.addFirst(mDatas);
     }
 
-    public class MyAdapter extends BaseRrAdapter<String> {
+    public class MyAdapter extends BaseRvAdapter<String> {
         public MyAdapter(Context context) {
             super(context);
 

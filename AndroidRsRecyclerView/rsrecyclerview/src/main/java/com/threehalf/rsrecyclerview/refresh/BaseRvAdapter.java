@@ -2,7 +2,6 @@ package com.threehalf.rsrecyclerview.refresh;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +25,7 @@ import java.util.List;
  * @describe RecyclerView Adapter
  * @date 2016/10/11 18:42
  */
-public abstract class BaseRrAdapter<T> extends RecyclerView.Adapter<BaseRrAdapter.RvCommonViewHolder> {
+public abstract class BaseRvAdapter<T> extends RecyclerView.Adapter<BaseRvAdapter.RvCommonViewHolder> {
     protected List<T> mBeans = new ArrayList<>();
     protected Context mContext;
     protected boolean mAnimateItems = true;
@@ -63,11 +62,11 @@ public abstract class BaseRrAdapter<T> extends RecyclerView.Adapter<BaseRrAdapte
         this.mRefreshRecyclerView = familiarRecyclerView;
     }
 
-    public BaseRrAdapter(Context context) {
+    public BaseRvAdapter(Context context) {
         mContext = context;
     }
 
-    public BaseRrAdapter(Context context, List<T> beans) {
+    public BaseRvAdapter(Context context, List<T> beans) {
         mContext = context;
         mBeans.clear();
         if (beans != null && beans.size() > 0) {
@@ -76,7 +75,7 @@ public abstract class BaseRrAdapter<T> extends RecyclerView.Adapter<BaseRrAdapte
     }
 
     @Override
-    public BaseRrAdapter.RvCommonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseRvAdapter.RvCommonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View contentView = inflater.inflate(getItemLayoutID(viewType), parent, false);
         if (mSwipeMenuCreator != null) {
@@ -127,7 +126,7 @@ public abstract class BaseRrAdapter<T> extends RecyclerView.Adapter<BaseRrAdapte
 
 
     @Override
-    public void onBindViewHolder(BaseRrAdapter.RvCommonViewHolder holder, int position) {
+    public void onBindViewHolder(BaseRvAdapter.RvCommonViewHolder holder, int position) {
         View itemView = holder.itemView;
         if (itemView instanceof SwipeMenuLayout) {
             SwipeMenuLayout swipeMenuLayout = (SwipeMenuLayout) itemView;
@@ -189,7 +188,7 @@ public abstract class BaseRrAdapter<T> extends RecyclerView.Adapter<BaseRrAdapte
                 @Override
                 public void onClick(View v) {
                     if (mBeans != null && mBeans.size() > 0) {
-                        onItemClick(BaseRrAdapter.this.mBeans.get(getAdapterPosition()), getAdapterPosition());
+                        onItemClick(BaseRvAdapter.this.mBeans.get(getAdapterPosition()), getAdapterPosition());
                     }
 
                 }

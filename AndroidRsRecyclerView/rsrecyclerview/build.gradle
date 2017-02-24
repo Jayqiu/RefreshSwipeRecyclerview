@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "1.0.1"
+version = "1.0.2"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -88,7 +88,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 //    }
 //}
 artifacts {
-    // archives javadocJar
+//    archives javadocJar
     archives sourcesJar
 }
 Properties properties = new Properties()

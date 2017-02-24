@@ -19,11 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        app:rv_divider="#333333"
-        app:rv_dividerHeight="0.5dp"
         app:rv_emptyView="@id/tv_empty"
         app:rv_isEmptyViewKeepShowHeadOrFooter="true"
-        app:rv_layoutManager="linear"
-        app:rv_layoutManagerOrientation="vertical" />
+      />
 
 </FrameLayout>

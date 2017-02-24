@@ -96,7 +96,7 @@ public class RefreshRecyclerView extends RecyclerView {
     private Drawable mDefAllDivider;
     private int mDefAllDividerHeight;
     private int layoutManagerType;
-    private int layoutManagerOrientation;
+    private int layoutManagerOrientation=DEF_LAYOUT_MANAGER_ORIENTATION;
     private boolean needInitAddItemDescration = false;
     private boolean hasShowEmptyView = false;
 
@@ -147,6 +147,9 @@ public class RefreshRecyclerView extends RecyclerView {
                     setLayoutManager(new StaggeredGridLayoutManager(gridSpanCount, layoutManagerOrientation));
                     break;
             }
+        }else{
+            layoutManagerType= LAYOUT_MANAGER_TYPE_LINEAR;
+            setLayoutManager(new LinearLayoutManager(context, layoutManagerOrientation, false));
         }
         setItemAnimator(new RefrechItemAnimator());
         ta.recycle();
@@ -292,8 +295,8 @@ public class RefreshRecyclerView extends RecyclerView {
 
         mReqAdapter.registerAdapterDataObserver(mReqAdapterDataObserver);
         //--------------------------------
-        if (adapter instanceof BaseRrAdapter) {
-            BaseRrAdapter menuAdapter = (BaseRrAdapter) adapter;
+        if (adapter instanceof BaseRvAdapter) {
+            BaseRvAdapter menuAdapter = (BaseRvAdapter) adapter;
             menuAdapter.setSwipeMenuCreator(mDefaultMenuCreator);
             menuAdapter.setRecyclerView(this);
             menuAdapter.setSwipeMenuItemClickListener(mDefaultMenuItemClickListener);

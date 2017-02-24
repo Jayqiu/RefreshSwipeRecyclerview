@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -100,6 +103,8 @@ public class ActRefreshListView extends FragmentActivity {
             }
         });
         mRsRecyclerView. setLoadMoreEnabled(true);
+
+//        mRsRecyclerView.setLayoutManager(setLayoutManager());
         mRecyclerView.setSwipeMenuItemClickListener(new OnSwipeMenuItemClickListener() {
             @Override
             public void onItemClick(Closeable closeable, int adapterPosition, int menuPosition, @RefreshRecyclerView.DirectionMode int direction) {
@@ -114,7 +119,13 @@ public class ActRefreshListView extends FragmentActivity {
         mRecyclerView.setAdapter(adapter);
         adapter.addFirst(mDatas);
     }
-
+    public RecyclerView.LayoutManager setLayoutManager() {
+        int orientation = LinearLayoutManager.VERTICAL;
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//
+//        linearLayoutManager.setOrientation(orientation); //这里
+        return new GridLayoutManager(this, 2);
+    }
     /**
      * 菜单创建器。在Item要创建菜单的时候调用。
      */

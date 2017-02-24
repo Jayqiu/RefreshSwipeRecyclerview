@@ -2,14 +2,14 @@ package com.threehalf.rsrecyclerview.demo;
 
 import android.content.Context;
 
-import com.threehalf.rsrecyclerview.refresh.BaseRrAdapter;
+import com.threehalf.rsrecyclerview.refresh.BaseRvAdapter;
 
 /**
  * @author jayqiu
  * @describe
  * @date 2017/2/15 14:43
  */
-public class ListViewAndGridViewAdapter extends BaseRrAdapter<String> {
+public class ListViewAndGridViewAdapter extends BaseRvAdapter<String> {
     public ListViewAndGridViewAdapter(Context context) {
         super(context);
 
