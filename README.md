@@ -100,6 +100,7 @@ mRecyclerView.setSwipeMenuCreator(swipeMenuCreator);
  mRsRecyclerView.loadMoreError();
 ```
 ### 自定义配置
+
     参数 | 类型 | 默认值 | 说明
     --- | --- | ---| ---
 rv_divider                 | reference / color               | 无        | 全局分割线divider
