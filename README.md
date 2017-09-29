@@ -102,10 +102,10 @@ mRecyclerView.setSwipeMenuCreator(swipeMenuCreator);
 ### 自定义配置
 
    | 参数 | 类型 | 默认值 | 说明
-    |--- | --- | ---| ---
-    |rv_divider                 | reference / color               | 无        | 全局分割线divider
+   |--- | --- | ---| ---
+   | v_divider                 | reference / color               | 无        | 全局分割线divider
    | rv_dividerVertical         | reference / color               | 无        | 垂直分割线divider
-  |  rv_dividerHorizontal       | reference / color               | 无        | 水平分割线divider
+   | rv_dividerHorizontal       | reference / color               | 无        | 水平分割线divider
    | rv_dividerHeight           | dimension                      | 1px       | 全局分割线size
    | rv_dividerVerticalHeight   | dimension                      | 1px       | 垂直分割线size
    | rv_dividerHorizontalHeight | dimension                      | 1px       | 水平分割线size
