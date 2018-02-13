@@ -120,6 +120,6 @@ mRecyclerView.setSwipeMenuCreator(swipeMenuCreator);
    | rv_footerDividersEnabled   | boolean                        | false     | 是否启用footerView中的分割线
 
 # Thanks
-RefreshSwipeRecyclerview 主要的是对 [FamiliarRecyclerView](https://github.com/iwgang/FamiliarRecyclerView) 和[SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerVie) 的一个整合修改
+RefreshSwipeRecyclerview 主要的是对 [FamiliarRecyclerView](https://github.com/iwgang/FamiliarRecyclerView) 和[SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerView) 的一个整合修改
 代码暂时还没有提交到Jcenter管理、希望需要的小伙伴clone代码直接引用 rsrecyclerview Module
 
